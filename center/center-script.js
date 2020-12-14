@@ -1,7 +1,7 @@
 "use strict";
 
 // json data
-var sky_centers_api = "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.2/sky-centers-by-country.json";
+var sky_centers_api = "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.3/center/sky-centers-by-country.json";
 
 //var sky_centers_api = "./sky-centers-by-country.json";
 var centersList = [];
