@@ -63,6 +63,6 @@ function setupFilterSkyCentersTable() {
 }
 
 $(document).ready(function() {
-  loadSkyCenters();
+  loadSkyCentersTable();
   setupFilterSkyCentersTable();
 });
