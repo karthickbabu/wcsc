@@ -3,13 +3,13 @@ h3 {
 }
 
 select.center-country {
-  width: 200px;
+  width: 150px;
   margin-left: auto;
   float: left
 }
 
 input.search-input {
-  width: 200px;
+  width: 150px;
   margin-left: auto;
   float: right
 }

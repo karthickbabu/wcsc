@@ -1,7 +1,7 @@
 "use strict";
 
 // json data
-var sky_centers_api = "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.3/center/sky-centers-by-country.json";
+var sky_centers_api = "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.4/center/sky-centers-by-country.json";
 
 //var sky_centers_api = "./sky-centers-by-country.json";
 var centersList = [];
@@ -60,7 +60,6 @@ function loadSkyCentersTable(centersJsonArr) {
         + '<tr>'
         + '<th>Name</th>'
         + '<th>City</th>'
-        + '<th>State</th>'
         + '<th>Address</th>'
         + '</tr>'
         + '</thead>'
@@ -69,8 +68,7 @@ function loadSkyCentersTable(centersJsonArr) {
       for (var j = 0; j < centersJsonArr.length; j++) {
         tableHtml += '<tr>'
           + '<td>' + centersJsonArr[j].Name + '</td>'
-          + '<td>' + centersJsonArr[j].City + '</td>'
-          + '<td>' + centersJsonArr[j].State + '</td>'
+          + '<td>' + centersJsonArr[j].City + ', ' + centersJsonArr[j].State + '</td>'
           + '<td>' + centersJsonArr[j].Address + '</td>'
           + '</tr>';
       }
