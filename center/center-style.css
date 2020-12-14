@@ -2,8 +2,14 @@ h3 {
   font-size: 18px;
 }
 
-h2 input.search-input {
-  width: 300px;
+select.center-country {
+  width: 200px;
+  margin-left: auto;
+  float: left
+}
+
+input.search-input {
+  width: 200px;
   margin-left: auto;
   float: right
 }

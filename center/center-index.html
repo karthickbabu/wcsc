@@ -4,10 +4,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-control" content="no-cache">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@latest/center-style.css">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -15,8 +15,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- Mandatory JavaScript -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@latest/center-script.js"></script>
+    <!-- Mandatory -->
+    <!--
+    <link rel="stylesheet"        href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.1/center-style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.1/center-script.js"></script>
+    -->
+
+    <link rel="stylesheet"        href="./center-style.css">
+    <script type="text/javascript" src="./center-script.js"></script>
 
     <title>SKY Centers</title>
   </head>
@@ -25,12 +31,12 @@
       <div class="container">  
         <h2>
           <span>SKY Centers</span>
-          <input type="search" placeholder="Search..." class="form-control search-input" data-table="skycenters-list"/>
         </h2>
-    
-        <button class="btn btn-primary" id="view-skycenters">
-          View SKY Centers
-        </button>
+
+        <select class="form-control center-country">
+          <option value="">--Country--</option>
+        </select>
+        <input type="search" placeholder="Search..." class="form-control search-input" data-table="skycenters-list"/>
 
         <div class="table-responsive">
           <div class="table-skycenters">
