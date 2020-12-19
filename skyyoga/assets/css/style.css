@@ -733,7 +733,7 @@ section {
 
 .benefits h3 {
   font-size: 24px;
-  margin: 0 0 15px 30px;
+  margin: 0 0 15px 0;
   font-weight: 700;
   position: relative;
   padding-bottom: 10px;
@@ -1077,7 +1077,7 @@ section {
 
 .cource-details-tabs h3 {
   font-size: 24px;
-  margin: 0 0 0 30px;
+  margin: 0 0 15px 0;
   font-weight: 700;
   position: relative;
   padding-bottom: 10px;
