@@ -137,11 +137,67 @@
     }
   });
 
+  // Excerpt from https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+  function geoFindMe(map) {
+    if (!navigator.geolocation){
+    console.log("Geolocation is not supported by your browser");
+      return;
+    }
+    function success(position) {
+      var latitude  = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      map.setView([latitude, longitude], 10);
+      //reverseGeocodingWithGoogle(longitude, latitude)
+    }
+    function error() {
+      console.log("Unable to retrieve your location");
+    }
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+
   // Init AOS
   $(window).on('load', function() {
     AOS.init({
       duration: 1000,
       once: true
+    });
+
+    var centers = $.ajax({
+      url: "assets/data/centers.geojson",
+      dataType: "json",
+      success: console.log("SKY Centers data successfully loaded."),
+      error: function(xhr) {
+          alert(xhr.statusText)
+      }
+    })
+    $.when(centers).done(function() {
+        var map = L.map('map')
+            .setView([12.9667606, 80.2152723], 10);
+
+        /*
+        var basemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+        */
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1Ijoia2FydGhpY2tiYWJ1IiwiYSI6ImNraXdycHd1bjF6ZG8ycXA0bnQ3NXh4dTQifQ.RJzV6rqtSSvEBKE6Ja113w'
+        }).addTo(map);
+
+        // Add requested external GeoJSON to map
+        var skyCenters = L.geoJSON(centers.responseJSON, {
+          onEachFeature: function (feature, layer) {
+            layer.bindPopup('<h4>'+ feature.properties.name + '</h4> <p> <strong>Address:</strong> ' + feature.properties.address + '</p>');
+          }
+        }).addTo(map);
+
+        geoFindMe(map);
     });
   });
 
