@@ -17,6 +17,10 @@ main {
   font-family: "Helvetica", sans-serif;
 }
 
+main ul {
+  list-style-position: outside;
+}
+
 a {
   color: #125494;
 }
@@ -37,6 +41,10 @@ h6 {
 
 .is-wrapper .container img {
   margin-top: 0 0 1rem 0;
+}
+
+.is-wrapper h6 {
+  font-weight: inherit;
 }
 
 /*--------------------------------------------------------------
