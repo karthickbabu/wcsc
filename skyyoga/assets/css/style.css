@@ -37,6 +37,7 @@ h4,
 h5,
 h6 {
   font-family: "Helvetica", sans-serif;
+  font-size: 0.8rem;
 }
 
 .is-wrapper .container img {
