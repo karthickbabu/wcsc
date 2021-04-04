@@ -1,7 +1,7 @@
-!(function ($) {
+(function () {
     "use strict";
 
-    $(document).ready(function () {
+    window.addEventListener('load', function () {
         document.querySelectorAll('.datetime').forEach(function (elem) {
             // <p class="datetime" from="2021-04-15 06:00" duration="90">Session 1: </p>
             var indiaTime = elem.getAttribute('from');
@@ -28,4 +28,4 @@
 
 
 
-})(jQuery);
+})();
