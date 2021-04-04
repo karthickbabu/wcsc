@@ -13,7 +13,7 @@
             var fromTimeLocal = moment(fromTimeIndia).local();
             var timehtml = "<br>" + "<b>" + elem.innerHTML + "</b>";
             if (timeZone !== "IST") {
-                timehtml += "<br> Date: " + fromTimeLocal.format("ll LT") + " to "
+                timehtml += "<br>" + fromTimeLocal.format("ll LT") + " to "
                     + fromTimeLocal.clone().add(durationInMins, 'minutes').format("LT") + " " + timeZone;
             }
             timehtml += "<br>" + fromTimeIndia.format("ll LT") + " to "
