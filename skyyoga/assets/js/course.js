@@ -11,13 +11,13 @@
 
             var fromTimeIndia = moment.tz(indiaTime, "Asia/Kolkata");
             var fromTimeLocal = moment(fromTimeIndia).local();
-            var timehtml = "<b>" + elem.innerHTML + "</b>";
+            var timehtml = "<br>" + "<b>" + elem.innerHTML + "</b>";
             if (timeZone !== "IST") {
-                timehtml += "<br>" + timeZone + " " + fromTimeLocal.format("ll LT") + " to "
-                    + fromTimeLocal.clone().add(durationInMins, 'minutes').format("LT");
+                timehtml += "<br> Date: " + fromTimeLocal.format("ll LT") + " to "
+                    + fromTimeLocal.clone().add(durationInMins, 'minutes').format("LT") + " " + timeZone;
             }
-            timehtml += "<br>" + "IST " + fromTimeIndia.format("ll LT") + " to "
-                + fromTimeIndia.clone().add(durationInMins, 'minutes').format("LT");
+            timehtml += "<br>" + fromTimeIndia.format("ll LT") + " to "
+                + fromTimeIndia.clone().add(durationInMins, 'minutes').format("LT") + " IST ";
 
 
             console.log(timehtml);

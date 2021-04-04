@@ -553,7 +553,7 @@ section {
 .breadcrumbs {
   margin-top: 73px;
   text-align: center;
-  background: #ff8040;
+  background-image: linear-gradient(to right, #266dd1, #30a7ba);
   padding: 30px 0;
   color: #fff;
 }
