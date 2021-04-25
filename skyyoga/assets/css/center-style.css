@@ -5,25 +5,30 @@ h3 {
 select.center-country {
   width: 150px;
   margin-left: auto;
-  float: left
+  float: left;
 }
 
 input.search-input {
   width: 150px;
   margin-left: auto;
-  float: right
+  float: right;
 }
 
 .mt32 {
   margin-top: 32px;
 }
 
-td, th {
+table {
+  font-size: 0.8rem;
+}
+
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #696969;
 }

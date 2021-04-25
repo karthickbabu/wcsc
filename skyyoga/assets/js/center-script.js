@@ -58,10 +58,10 @@ function loadSkyCentersTable(centersJsonArr) {
       tableHtml += '<table class="table table-striped mt32 skycenters-list">'
         + '<thead>'
         + '<tr>'
-        + '<th>Name</th>'
-        + '<th>City</th>'
-        + '<th>Address</th>'
-        + '<th>Contact</th>'
+        + '<th style="font-size:0.8rem">Name</th>'
+        + '<th style="font-size:0.8rem">City</th>'
+        + '<th style="font-size:0.8rem">Address</th>'
+        + '<th style="font-size:0.8rem">Contact</th>'
         + '</tr>'
         + '</thead>'
         + '<tbody>';
@@ -91,10 +91,10 @@ function loadSkyCentersTable(centersJsonArr) {
         var contactStr = contacts.join(" / ");
 
         tableHtml += '<tr>'
-          + '<td>' + centersJsonArr[j].Name + '</td>'
-          + '<td>' + centersJsonArr[j].City + ', ' + centersJsonArr[j].State + '</td>'
-          + '<td>' + centersJsonArr[j].Address + '</td>'
-          + '<td>' + contactStr + '</td>'
+          + '<td style="font-size:0.8rem">' + centersJsonArr[j].Name + '</td>'
+          + '<td style="font-size:0.8rem">' + centersJsonArr[j].City + ', ' + centersJsonArr[j].State + '</td>'
+          + '<td style="font-size:0.8rem">' + centersJsonArr[j].Address + '</td>'
+          + '<td style="font-size:0.8rem">' + contactStr + '</td>'
           + '</tr>';
       }
       tableHtml += '</tbody></table>';
