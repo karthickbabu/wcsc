@@ -16,10 +16,10 @@
     crossorigin="anonymous"></script>
 
 <!-- Mandatory -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@main/skyyoga/assets/css/center-style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@main/skyyoga/assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.10/skyyoga/assets/css/center-style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.10/skyyoga/assets/css/style.css">
 <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@main/skyyoga/assets/js/center-script.js"></script>
+    src="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.10/skyyoga/assets/js/center-script.js"></script>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -64,7 +64,7 @@
     // Init AOS
     $(window).on('load', function () {
         var centers = $.ajax({
-            url: "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@main/skyyoga/assets/data/centers.geojson",
+            url: "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.10/skyyoga/assets/data/centers.geojson",
             dataType: "json",
             success: console.log("SKY Centers data successfully loaded."),
             error: function (xhr) {
