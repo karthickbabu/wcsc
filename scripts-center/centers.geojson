@@ -10138,7 +10138,7 @@
         "Address": "C/o.A/N.N.Chidambaram, No.59, Senghunthar Big Street, Solingar & P.O - 631102.",
         "Zone": "",
         "ContactPersonName": "A/N. Thomas Stockinger Master I/C",
-        "Mobile_1": "4.36505E+11",
+        "Mobile_1": "4.37E+11",
         "Mobile_2": "-",
         "Landline": "-",
         "Email": "thomas.stockinger@gmx.at, austria@vethathiri.ac.in"
@@ -11921,8 +11921,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.3521,
-          103.8198
+          103.8198,
+          1.3521
         ]
       }
     },
