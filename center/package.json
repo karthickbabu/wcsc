@@ -6,6 +6,7 @@
   "dependencies": {
     "@geocoder-free/google": "^0.2.9-alpha.0",
     "@googlemaps/google-maps-services-js": "^3.1.16",
+    "csv2geojson": "^5.1.1",
     "csvtojson": "^2.0.10",
     "google-geocoder": "^0.2.1",
     "node-open-geocoder": "^4.0.1",
