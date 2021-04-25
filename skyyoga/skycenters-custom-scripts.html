@@ -16,10 +16,10 @@
     crossorigin="anonymous"></script>
 
 <!-- Mandatory -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.10/skyyoga/assets/css/center-style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.10/skyyoga/assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.11/skyyoga/assets/css/center-style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.11/skyyoga/assets/css/style.css">
 <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.10/skyyoga/assets/js/center-script.js"></script>
+    src="https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.11/skyyoga/assets/js/center-script.js"></script>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -64,7 +64,7 @@
     // Init AOS
     $(window).on('load', function () {
         var centers = $.ajax({
-            url: "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.10/skyyoga/assets/data/centers.geojson",
+            url: "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.11/skyyoga/assets/data/centers.geojson",
             dataType: "json",
             success: console.log("SKY Centers data successfully loaded."),
             error: function (xhr) {
@@ -120,24 +120,24 @@
                     return L.circleMarker(latlng, geojsonMarkerOptions);
                 },
                 onEachFeature: function (feature, layer) {
-                    var phoneDetails = "";
+                    var phoneDetails = [];
                     if (feature.properties.Mobile_1 && (feature.properties.Mobile_1 != "-")) {
-                        phoneDetails += feature.properties.Mobile_1;
+                        phoneDetails.push(feature.properties.Mobile_1);
                     }
 
                     if (feature.properties.Mobile_2 && (feature.properties.Mobile_2 != "-")) {
-                        phoneDetails += feature.properties.Mobile_2;
+                        phoneDetails.push(feature.properties.Mobile_2);
                     }
 
                     if (feature.properties.Landline && (feature.properties.Landline != "-")) {
-                        phoneDetails += feature.properties.Mobile_2;
+                        phoneDetails.push(feature.properties.Mobile_2);
                     }
 
                     layer.bindPopup(
                         '<h3 style="color: rgb(235, 135, 14); font: bold 1.2em Arial, sans-serif;">' + feature.properties.Name + '</h3>'
                         + '<p style="color: #2954A3; font: 1em Arial, sans-serif;line-height: 1em"> <strong>Address:</strong> ' + feature.properties.Address + '</p>'
                         + '<p style="color: #2954A3; font: 1em Arial, sans-serif;line-height: 1em"> <strong>Contact Person:</strong> ' + feature.properties.ContactPerson + '</p>'
-                        + '<p style="color: #2954A3; font: 1em Arial, sans-serif;line-height: 1em"> <strong>Contact Phone:</strong> ' + phoneDetails + '</p>'
+                        + '<p style="color: #2954A3; font: 1em Arial, sans-serif;line-height: 1em"> <strong>Contact Phone:</strong> ' + phoneDetails.join(", ") + '</p>'
                         + '<p style="color: #2954A3; font: 1em Arial, sans-serif;line-height: 1em"> <strong>E-Mail:</strong> ' + feature.properties.Email + '</p>'
                     );
                 }

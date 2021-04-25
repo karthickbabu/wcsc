@@ -1,7 +1,7 @@
 "use strict";
 
 // json data
-var sky_centers_api = "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.10/skyyoga/assets/data/sky-centers-by-country.json";
+var sky_centers_api = "https://cdn.jsdelivr.net/gh/karthickbabu/wcsc@0.0.11/skyyoga/assets/data/sky-centers-by-country.json";
 
 //var sky_centers_api = "./sky-centers-by-country.json";
 var centersList = [];
@@ -61,15 +61,40 @@ function loadSkyCentersTable(centersJsonArr) {
         + '<th>Name</th>'
         + '<th>City</th>'
         + '<th>Address</th>'
+        + '<th>Contact</th>'
         + '</tr>'
         + '</thead>'
         + '<tbody>';
 
       for (var j = 0; j < centersJsonArr.length; j++) {
+        var contacts = [];
+        if (centersJsonArr[j].ContactPersonName && centersJsonArr[j].ContactPersonName != "-") {
+          contacts.push(centersJsonArr[j].ContactPersonName);
+        }
+
+        if (centersJsonArr[j].Mobile_1 && centersJsonArr[j].Mobile_1 != "-") {
+          contacts.push(centersJsonArr[j].Mobile_1);
+        }
+
+        if (centersJsonArr[j].Mobile_2 && centersJsonArr[j].Mobile_2 != "-") {
+          contacts.push(centersJsonArr[j].Mobile_2);
+        }
+
+        if (centersJsonArr[j].Landline && centersJsonArr[j].Landline != "-") {
+          contacts.push(centersJsonArr[j].Landline);
+        }
+
+        if (centersJsonArr[j].Email && centersJsonArr[j].Email != "-") {
+          contacts.push(centersJsonArr[j].Email);
+        }
+
+        var contactStr = contacts.join(" / ");
+
         tableHtml += '<tr>'
           + '<td>' + centersJsonArr[j].Name + '</td>'
           + '<td>' + centersJsonArr[j].City + ', ' + centersJsonArr[j].State + '</td>'
           + '<td>' + centersJsonArr[j].Address + '</td>'
+          + '<td>' + contactStr + '</td>'
           + '</tr>';
       }
       tableHtml += '</tbody></table>';
