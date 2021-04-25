@@ -1,0 +1,22 @@
+{
+  "name": "data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "centers-csv-to-json.js",
+  "dependencies": {
+    "@geocoder-free/google": "^0.2.9-alpha.0",
+    "@googlemaps/google-maps-services-js": "^3.1.16",
+    "csvtojson": "^2.0.10",
+    "google-geocoder": "^0.2.1",
+    "node-open-geocoder": "^4.0.1",
+    "nominatim-geocoder": "^0.1.4",
+    "xmldom": "^0.6.0",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
