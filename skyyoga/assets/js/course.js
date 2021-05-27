@@ -27,6 +27,19 @@
 
             elem.innerHTML = timehtml;
         })
+
+        document.querySelectorAll('.outsideIndia').forEach(function (elem) {
+            var timeZone = new Date().toLocaleTimeString('en-us', { timeZoneName: 'short' }).split(' ')[2]
+            if (timeZone === "IST" || timeZone === "GMT+5:30") {
+                elem.style.visibility = ""
+            }
+
+            if (timeZone !== "IST" && timeZone !== "GMT+5:30") {
+                elem.style.visibility = "visible";
+            } else {
+                elem.style.visibility = "hidden";
+            }
+        })
     });
 
 
