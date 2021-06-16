@@ -7,4 +7,4 @@
 
 *** Parse files and convert it to required format ***
 node parse-centers.js -i 2021_04_23_WCSC_Centers.csv
-Copy centers.geojson, sky-centers.json and sky-center-by-country.json to skyyoga folder.
+Copy centers.geojson, sky-centers.json and sky-center-by-country.json to skyyoga/assets/data folder.
